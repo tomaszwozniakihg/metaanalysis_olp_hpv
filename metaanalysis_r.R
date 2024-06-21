@@ -1,8 +1,6 @@
-### load the package and the data for the BCG vaccine meta-analysis
 #install.packages('readr')
 library("metafor")
 
-### calculate the log relative risks and corresponding sampling variances
 data <- read.csv('data.csv')
 print(data)
 dat <- escalc(measure = "OR", ai = tpos, bi = tneg, ci = cpos,
